@@ -7,14 +7,6 @@
   <script>
     function prime_it() {
       var url = "http://" + document.getElementById("ip").value + "/set_universal_ap_reg_domain.shtml";
-      /*
-      $.ajaxSetup({
-        beforeSend: function(xhr) {
-          xhr.setRequestHeader('Authorization', 'Basic ' + btoa(document.getElementById("username").value + ':' + document.getElementById("password").value));
-        }
-      });
-      */
-      //$.post(url, $( "#priming_form" ).serialize());
       $.ajax({
         type : 'POST',
         url : url,
@@ -22,7 +14,7 @@
           withCredentials: true
         },
         headers: {
-          'Authorization': 'Basic ' + btoa(document.getElementById("username").value + ':' + document.getElementById("password").value))
+          'Authorization': 'Basic ' + btoa(document.getElementById("username").value + ':' + document.getElementById("password").value)
         },
         data : {
           $("#priming_form").serialize()
