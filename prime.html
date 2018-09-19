@@ -6,7 +6,7 @@
 <body>
   <script>
     function prime_it() {
-      var url = "http://" + document.getElementById("username").value + ':' + document.getElementById("password").value + "@" + document.getElementById("ip").value + "/set_universal_ap_reg_domain.shtml";
+      var url = "http://" + document.getElementById("ip").value + "/set_universal_ap_reg_domain.shtml";
       /*
       $.ajaxSetup({
         beforeSend: function(xhr) {
@@ -14,7 +14,20 @@
         }
       });
       */
-      $.post(url, $( "#priming_form" ).serialize());
+      //$.post(url, $( "#priming_form" ).serialize());
+      $.ajax({
+        type : 'POST',
+        url : url,
+        xhrFields: {
+          withCredentials: true
+        },
+        headers: {
+          'Authorization': 'Basic ' + btoa(document.getElementById("username").value + ':' + document.getElementById("password").value))
+        },
+        data : {
+          $("#priming_form").serialize()
+        }
+      }    
     }
   </script>
 <center>
