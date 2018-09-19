@@ -16,9 +16,7 @@
         headers: {
           'Authorization': 'Basic ' + btoa(document.getElementById("username").value + ':' + document.getElementById("password").value)
         },
-        data : {
-          $("#priming_form").serialize()
-        }
+        data : $("#priming_form").serialize()
       });   
     }
   </script>
