@@ -4,7 +4,7 @@ How to prime universal Cisco Access Point
 
 I spent two full days on reverse engineering of the Priming process for the Universal Access Points made by Cisco. I think it worth to share my experience once you face the same issue.
 
-I will not describe the network lab I built for the cracking procedure, all the steps with decoding SSL, DTLS, e.t.c. Let's go straight to the priming.
+I will not describe the network lab I built for the cracking procedure, all the steps with decoding SSL, DTLS, e.t.c. Let's go straight to the priming steps.
 
 # Prerequesities
 
