@@ -34,6 +34,6 @@ For the network stuff I work mostly in Linux, so it is easy as invoking the CURL
 
 curl -v -X POST "http://1.2.3.4/set_universal_ap_reg_domain.shtml?configMode=1&location=DE&regDomain5=-E&regDomain24=-E" -u "User:Secret1234"
 
-PS: in our case I am using "DE" as a country which I am going the prime the AP for. Free to use any country you like: US/DE/FR/SE/e.t.c. Pay attention to the regDomain param value: it is -E for Europe. You probably have to adapt it for your region.
+PS: in our case I am using "DE" as a country which I am going the prime the AP for. Feel free to use any country you like: US/DE/FR/SE/e.t.c. Pay attention to the regDomain param value: it is -E for Europe. You probably have to adapt it for your region as well.
 
 Cheers ;)
