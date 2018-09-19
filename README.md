@@ -36,4 +36,6 @@ curl -v -X POST "http://1.2.3.4/set_universal_ap_reg_domain.shtml?configMode=1&l
 
 PS: in our case I am using "DE" as a country which I am going the prime the AP for. Feel free to use any country you like: US/DE/FR/SE/e.t.c. Pay attention to the regDomain param value: it is -E for Europe. You probably have to adapt it for your region as well.
 
+PPS: Starting from now you can open the following link: http://htmlpreview.github.io/?https://github.com/vbeskrovny/Cisco-Universal-AP/blob/master/prime.html on your smartphone, then connect to the SSID, fill in the data and click "Prime it" button...
+
 Cheers ;)
