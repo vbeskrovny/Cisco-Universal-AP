@@ -1,7 +1,14 @@
 <html>
 <head><title>Easy Priming Inc.</title></head>
 <body>
+  <script>
+    function prime_it() {
+      var url = "http://" + document.getElementById("ip").value + "";
+      alert(url);
+    }
+  </script>
 <center>
+  <h3>Easy Priming</h3>
 <table>
   <tr><td>AP IP (e.g.: 1.2.3.4):</td><td><input type="text" id="ip"></td></tr>
   <tr><td>5 Ghz RegDomain (e.g.: A,E):</td><td><input type="text" id="reg5"></td></tr>
