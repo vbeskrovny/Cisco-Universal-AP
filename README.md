@@ -12,9 +12,10 @@ You should have alredy pre-configured:
 1. WLC
 2. SSID with PSK (the easiest way) attached to the AP group (I used "Priming")
 3. Universal AP assigned to the AP group (I used "Priming")
-4. Laptop should be connected to the broadcasted by Unprimed AP SSID
-5. Open AP settings on WLC, go to the second tab after "General" -> "Credentials"
-6. Create custom authentication credentials for the AP, such as User:Secret1234
+4. AP should be in FlexMode (at least in my case)
+5. Laptop should be connected to the broadcasted by Unprimed AP SSID
+6. Open AP settings on WLC, go to the second tab after "General" -> "Credentials"
+7. Create custom authentication credentials for the AP, such as User:Secret1234
 
 # Verification
 
@@ -36,6 +37,6 @@ curl -v -X POST "http://1.2.3.4/set_universal_ap_reg_domain.shtml?configMode=1&l
 
 PS: in our case I am using "DE" as a country which I am going the prime the AP for. Feel free to use any country you like: US/DE/FR/SE/e.t.c. Pay attention to the regDomain param value: it is -E for Europe. You probably have to adapt it for your region as well.
 
-PPS: Starting from now you can open the following link: http://htmlpreview.github.io/?https://github.com/vbeskrovny/Cisco-Universal-AP/blob/master/prime.html on your smartphone, then connect to the SSID, fill in the data and click "Prime it" button...
+PPS: Starting from now you can open the following link: http://htmlpreview.github.io/?https://github.com/vbeskrovny/Cisco-Universal-AP/blob/master/prime.html on your smartphone, then connect to the SSID, fill in the data and click "Prime it" button... - still testing. Not sure if it works.
 
 Cheers ;)

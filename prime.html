@@ -1,5 +1,6 @@
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Easy Priming Inc.</title>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -7,45 +8,21 @@
   <script>
     function prime_it() {
       var url = "http://" + document.getElementById("ip").value + "/set_universal_ap_reg_domain.shtml";
-      $.ajax({
-        type : 'POST',
-        url : url,
-        /*
-        xhrFields: {
-          withCredentials: true
-        },
-        headers: {
-          'Authorization': 'Basic ' + btoa(document.getElementById("username").value + ':' + document.getElementById("password").value)
-        },
-        */
-        data : $("#priming_form").serialize()
-      });   
+      $("#priming_form").attr('action', url);
+      $("#priming_form").submit();
     }
-
-    function prime_it2() {
-
-      this.action = "http://" + document.getElementById("ip").value + "/set_universal_ap_reg_domain.shtml";
-      return true;
-    
-    }
-
   </script>
 <center>
   <h3>Easy Priming</h3>
 <table>
   <tr><td>AP IP (e.g.: 1.2.3.4):</td><td><input type="text" id="ip"></td></tr>
-  <form id="priming_form" method="POST">
+  <form id="priming_form" method="POST" action="">
     <input type="hidden" name="configMode" value="1">
     <tr><td>Country code (e.g.: US, DE, FR):</td><td><input type="text" name="location" value="DE"></td></tr>  
-    <tr><td>5 Ghz RegDomain (e.g.: -A):</td><td><input type="text" name="regDomain5" value="-A"></td></tr>
+    <tr><td>5 Ghz RegDomain (e.g.: -A):</td><td><input type="text" name="regDomain5" value="-E"></td></tr>
     <tr><td>2.4 Ghz RegDomain (e.g.: -E):</td><td><input type="text" name="regDomain24" value="-E"></td></tr>
-    <tr><td colspan="2" align="center"><br><br><input type="button" value="Prime it" onClick="prime_it2()"></td></tr>
+    <tr><td colspan="2" align="center"><br><input type="button" value="Prime it" onClick="prime_it()"></td></tr>
   </form>
-  <!--
-    <tr><td>Username (e.g.: User):</td><td><input type="text" id="username"></td></tr>
-    <tr><td>Password (e.g.: Secret1234):</td><td><input type="password" id="password"></td></tr>
-  -->
-  
 </table>
 </center>
 </body>
